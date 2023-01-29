@@ -1,8 +1,8 @@
 import React from 'react'
-
-function TaskItem() {
+import './taskitem.css'
+function TaskItem(props) {
   return (
-    <div>TaskItem</div>
+df
   )
 }
 

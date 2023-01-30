@@ -13,7 +13,7 @@ function Tasks() {
   }
   return (
     <div className='tasks'>
-      <h2>Tasks</h2>
+      <div className='h2'><div>Tasks</div></div>
       <div className="tasksWrapper">
         <div className="tasksview">
           <ul className='tasklist'>

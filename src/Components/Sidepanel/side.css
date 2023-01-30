@@ -1,10 +1,13 @@
 .sidebar{
-  height: 100vh;
+  height: 90.5vh;
   width: 20vw;
-  background-color: #83e483;
+  background-color: #b7dbe0;
   border: 0;
+  margin: 0;
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 4.8vh;
+  left: 2vw;
   z-index: 999;
+  border-radius: 20px;
+  opacity: 0.5;
 }

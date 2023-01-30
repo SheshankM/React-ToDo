@@ -17,7 +17,7 @@ background-color: #161616;
 
 
 .h2{
-  margin: 0px 0px 10px 0px;
+  margin: 0px 0px 20px 0px;
   width: 120px;
   height: 50px;
   background-color: #8fd372ca;
@@ -43,7 +43,7 @@ ul.tasklist{
   list-style-type: none;
 }
 ul.tasklist li{
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 ul.tasklist li:nth-last-child(-n+1){
   margin-bottom: 60px !important;
@@ -83,42 +83,3 @@ input#task:focus{
   opacity: 1;
 }
 
-
-.taskitem{
-  display: flex ;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  height: 40px;
-  width: 70vw;
-  background-color: white;
-  opacity: 0.5;
-  color: black;
-  padding: 5px 0px;
-  border-radius: 10px;
-}
-
-
-input.check{
-  width: 20px ;
-  height: 20px;
-  flex: 0.5;
-  background-color: #d4cfcf90;
-}
-
-.taskname{
-  flex: 10.5;
-  font-size: 1.5rem;
-}
-.delete-task{
-  flex: 1;
-  font-size: 1.5rem;
-  text-align: center;
-}
-
-.delete-task:hover{
-  color: #e63030;
-  font-size: 1.55rem;
-  transform: scale(1.2);
-  transition: 0.08s;
-}

@@ -1,15 +1,25 @@
 
 import { useState } from 'react'
+import { render } from 'react-dom';
+import TaskItem from '../TaskItem/TaskItem';
 import './tasks.css'
 
 
 function Tasks() {
-  const [tasks,setTasks] = useState([]);
+  const [tasks, setTasks] = useState([]);
+  const [inputvalue, setinputvalue] = useState('');
   const handleSubmit = (e) => {
     e.preventDefault();
-    const input = e.target.elements.name;
-    setTasks((prevtasks)=> [...prevtasks,input.value]);
-    input.value = "";
+    if (inputvalue == '') return;
+    setTasks((prevtasks) => [...prevtasks, inputvalue]);
+    setinputvalue('');
+  }
+  const handleChange = (e) => {
+    setinputvalue(e.target.value);
+  }
+  const handleDelete= (id) =>{
+    const newtasks = tasks.filter((task)=>{ task.id !== id});
+
   }
   return (
     <div className='tasks'>
@@ -17,16 +27,13 @@ function Tasks() {
       <div className="tasksWrapper">
         <div className="tasksview">
           <ul className='tasklist'>
-            {tasks.map((name, index) => (
-              <li className='taskitem' key={index}>
-                <input type="checkbox" name="checkBox" className='check' />
-                <div className="taskname">{name}</div>
-                <i className="fa-regular fa-trash-can delete-task" ></i>
-              </li>))}
+            {tasks.map((task) => (
+              <TaskItem name={task} key = {task} handDele = {handleDelete}/>
+            ))}
           </ul>
         </div>
         <form className="bottom" onSubmit={handleSubmit}>
-          <input type="text" name="name" id="task" placeholder='enter task' />
+          <input type="text" name="taskname" id="task" placeholder='enter task' value={inputvalue} onChange={handleChange} />
           <button className="submit" type='submit'>Add Task </button>
         </form>
       </div>

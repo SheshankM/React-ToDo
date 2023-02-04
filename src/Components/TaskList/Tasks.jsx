@@ -17,7 +17,7 @@ function Tasks() {
     setinputvalue(e.target.value);
   }
   const handleDelete= (id) =>{
-    const newTasks = tasks.filter((task,index)=>{ index !== id});
+    const newTasks = tasks.filter((task,index)=>( index !== id));
     setTasks(newTasks);
   }
   return (
@@ -26,8 +26,8 @@ function Tasks() {
       <div className="tasksWrapper">
         <div className="tasksview">
           <ul className='tasklist'>
-            {tasks.map((task) => (
-              <TaskItem name={task} key={task} handleDelete = {handleDelete}/>
+            {tasks.map((task,index) => (
+              <TaskItem key={index.toString()} id={index} name= {task} handleDelete = {handleDelete}/>
             ))}
           </ul>
         </div>

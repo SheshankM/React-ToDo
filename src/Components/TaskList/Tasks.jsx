@@ -1,6 +1,5 @@
 
 import { useState } from 'react'
-import { render } from 'react-dom';
 import TaskItem from '../TaskItem/TaskItem';
 import './tasks.css'
 
@@ -18,8 +17,8 @@ function Tasks() {
     setinputvalue(e.target.value);
   }
   const handleDelete= (id) =>{
-    const newtasks = tasks.filter((task)=>{ task.id !== id});
-
+    const newTasks = tasks.filter((task,index)=>{ index !== id});
+    setTasks(newTasks);
   }
   return (
     <div className='tasks'>
@@ -28,13 +27,13 @@ function Tasks() {
         <div className="tasksview">
           <ul className='tasklist'>
             {tasks.map((task) => (
-              <TaskItem name={task} key = {task} handDele = {handleDelete}/>
+              <TaskItem name={task} key={task} handleDelete = {handleDelete}/>
             ))}
           </ul>
         </div>
         <form className="bottom" onSubmit={handleSubmit}>
           <input type="text" name="taskname" id="task" placeholder='enter task' value={inputvalue} onChange={handleChange} />
-          <button className="submit" type='submit'>Add Task </button>
+          <button className="submit" type='submit'>Add Task</button>
         </form>
       </div>
     </div>

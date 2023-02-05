@@ -34,7 +34,7 @@ function Tasks() {
           </ul>
         </div>
         <form className="bottom" onSubmit={handleSubmit}>
-          <input type="text" name="taskname" id="task" placeholder='Add task in list Tasks' value={inputvalue} onChange={handleChange} />
+          <input type="text" name="taskname" id="task" placeholder='Add task in list My Day' value={inputvalue} onChange={handleChange} />
           <button className="submit" type='submit'>Add Task</button>
         </form>
       </div>

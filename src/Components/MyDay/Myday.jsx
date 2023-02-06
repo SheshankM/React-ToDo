@@ -1,10 +1,10 @@
 
 import { useState } from 'react'
 import TaskItem from '../TaskItem/TaskItem';
-import './tasks.css'
+import './myday.css'
 
 
-function Tasks() {
+function Myday() {
   
   const [tasks, setTasks] = useState([]);
   const [inputvalue, setinputvalue] = useState('');
@@ -42,4 +42,4 @@ function Tasks() {
   )
 }
 
-export default Tasks
+export default Myday

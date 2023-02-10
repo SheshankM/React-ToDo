@@ -8,12 +8,12 @@ function Side() {
     <div className='sidebar'>
       <div className="sidebarWrapper">
           <h2 className='heading'>Todo List</h2>
-          <ul>
+          {/* <ul>
           <li><Link to='/'><RiSunFill className='sun-icon'/><span>My Day</span></Link></li>
             <li><IoMdStarOutline/> Important</li>
             <li><FaRegCalendarAlt/>Planned</li>
             <Link to= '/tasks'><li><FaTasks/>Tasks</li></Link>
-          </ul>
+          </ul> */}
       </div>
     </div>
   )

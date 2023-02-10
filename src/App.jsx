@@ -8,11 +8,13 @@ function App() {
   
   return (
     <div className="App">
-      <Router>
+      <Tasks/>
+      <Side/>
+      {/* <Router>
         <Side/>
         <Route path="/" component= {Myday}/>
         <Route path="/tasks" component = {Tasks} />
-        </Router>
+        </Router> */}
     </div>
   )
 }

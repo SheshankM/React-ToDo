@@ -22,9 +22,22 @@
   font-size: 1.4rem;
   list-style-type: none;
   text-align: start;
-  margin: 0 0 1.5rem 1rem;
+  margin: 0.5rem 1rem;
+  padding: 0.5rem 0.7rem;
+}
+ul.list-names .icon{
+  margin-right: 5px;
 }
 
-.sun-icon{
-  color: white;
+ul.list-names li{
+  text-decoration: none;
+  color: black;
 }
+
+ul.list-names li:hover{
+  background-color: rgb(75, 74, 74);
+  border-radius:13px;
+  color: white;
+  font-size: bold;
+}
+

@@ -24,7 +24,7 @@ function Myday() {
   }
   return (
     <div className='tasks'>
-      <div className='h2'><div>Tasks</div></div>
+      <div className='h2'><div>MyDay</div></div>
       <div className="tasksWrapper">
         <div className="tasksview">
           <ul className='tasklist'>

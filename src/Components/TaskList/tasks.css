@@ -86,3 +86,7 @@ input#task:focus{
   opacity: 1;
 }
 
+
+div .test { 
+  border: 10px solid red;
+}

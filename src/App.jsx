@@ -1,20 +1,19 @@
 
 import './App.css'
 import Side from './Components/Sidepanel/Side'
-import Tasks from './Components/TaskList/Tasks'
+import Tasks from './Components/TaskList/Tasks';
+// import Planned from './Components/Planned/Planned';
 import Myday from './Components/MyDay/Myday'
-import { BrowserRouter as Router ,Route } from 'react-router-dom';
+import {Routes ,Route } from 'react-router-dom';
 function App() {
   
   return (
     <div className="App">
-      <Tasks/>
       <Side/>
-      {/* <Router>
-        <Side/>
-        <Route path="/" component= {Myday}/>
-        <Route path="/tasks" component = {Tasks} />
-        </Router> */}
+      <Routes>
+        <Route path="/" element= {<Myday/>}/>
+        <Route path="tasks" element = {<Tasks/>} />
+      </Routes>
     </div>
   )
 }

@@ -8,7 +8,7 @@
   top: 4.8vh;
   left: 2vw;
   z-index: 999;
-  border-radius: 20px;
+  border-radius: 20px;  
   opacity: 0.5;
 }
 
@@ -25,17 +25,30 @@
   margin: 0.5rem 1rem;
   padding: 0.5rem 0.7rem;
 }
-ul.list-names .icon{
-  margin-right: 5px;
+
+ul.list-names{
+  padding: 0;
 }
 
-ul.list-names li{
+ul.list-names .icon{
+  margin: -5px 5px 0 0;
+}
+ul.list-names.icon.star{
+  margin: -5px 0 0 0 !important;
+}
+
+ul.list-names a{
   text-decoration: none;
   color: black;
 }
-
+ul.list-name a.active{
+  border-radius:13px;
+  color: white;
+  font-size: bold;
+  background-color: black;
+}
 ul.list-names li:hover{
-  background-color: rgb(75, 74, 74);
+  background-color: #4b4a4a;
   border-radius:13px;
   color: white;
   font-size: bold;

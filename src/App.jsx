@@ -6,10 +6,18 @@ import Myday from './Components/MyDay/Myday'
 import {Routes ,Route } from 'react-router-dom';
 import Planned from './Components/Planned/Planned';
 import Important from './Components/Important/Important';
+import BgComp from './Components/BgComp/BgComp';
+import { useRef } from 'react';
 function App() {
-  
+  const container = useRef(null);
+  const applyWallpaper = (id)=>{
+    
+    let wallId = Number(id)+1;
+    container.current.style.background = `url(src/Components/BgComp/images/wall${wallId}.png`;
+    console.log(`wallpaper ${wallId}`)
+  }
   return (
-    <div className="App">
+    <div className="App" ref={container}>
       <Side/>
       <Routes>
         <Route path="/" element= {<Myday/>}/>
@@ -17,6 +25,7 @@ function App() {
         <Route path="important" element = {<Important/>} />
         <Route path="planned" element = {<Planned/>} />
       </Routes>
+      <BgComp  applyWallpaper = {applyWallpaper}/>
     </div>
   )
 }

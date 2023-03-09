@@ -1,8 +1,8 @@
 import React from 'react'
 import { useState } from 'react';
-import './taskitem.css'
+import './comptaskitem.css'
 function TaskItem({id,name,handleDelete,handleCheck}) {
-  const [isChecked, setisChecked] = useState(false);
+  const [isChecked, setisChecked] = useState(true);
   const handleChange = () =>{
     setisChecked(!isChecked);
     handleCheck(id,isChecked);

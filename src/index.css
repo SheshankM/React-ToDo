@@ -2,10 +2,10 @@
   margin: 0;
   padding: 0;
   object-fit: cover;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'poppins', sans-serif;
 }
 body{
-  /* background: url(./Components/BgComp/images/wall2.png); */
+  background: url(./Components/BgComp/images/wall1.png);
   background-size: 100vw 100vh;
   background-repeat: no-repeat;
 }

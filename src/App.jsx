@@ -9,11 +9,11 @@ import Important from './Components/Important/Important';
 import BgComp from './Components/BgComp/BgComp';
 import { useRef } from 'react';
 function App() {
-  const container = useRef(null);
+  const container = useRef(0);
   const applyWallpaper = (id)=>{
     
     let wallId = Number(id)+1;
-    container.current.style.background = `url(src/Components/BgComp/images/wall${wallId}.png`;
+    container.current.style.backgroundImage = `url(src/Components/BgComp/images/wall${wallId}.png`;
     console.log(`wallpaper ${wallId}`)
   }
   return (
